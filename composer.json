@@ -1,0 +1,11 @@
+{
+    "name": "ccmixter/s3",
+    "require": {
+        "aws/aws-sdk-php": "^3.185"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ccmixter\\S3\\": "src/"
+        }
+    }
+}
