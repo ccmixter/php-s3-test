@@ -44,3 +44,14 @@ for example:
 http://localhost:3000/s3.php?uri=content/cube3/cube3_-_I_m_Waiting.mp3
 ```
 
+# Dockerize
+
+```
+docker build . -t ccmixter-s3
+```
+
+Run the container, setting your s3 endpoint, key, secret and Time to Live (TTL) in 10 minutes:
+
+```
+docker run -p 127.0.0.1:47360:80 -e S3_ENDPOINT="<<your_endpoint>>" -e S3_KEY="<<your_key>>" -e S3_SECRET="<<your_secret>>" -e S3_TTL_MINUTES=10 --name ccmixter-s3 ccmixter-s3
+```
