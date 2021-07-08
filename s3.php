@@ -15,8 +15,8 @@ $s3 = new Aws\S3\S3Client([
 ]);
 
 $command = $s3->getCommand('GetObject', [
-    'Bucket' => 'www',
-    'Key'    => $_GET['uri'],
+    'Bucket' => getenv("S3_BUCKET"),
+    'Key'    => getenv("S3_BASE_URI") . $_GET['uri'],
 ]);
 
 // Create a pre-signed URL for a request with duration of 10 miniutes
